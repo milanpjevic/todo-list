@@ -5,7 +5,7 @@ const todos = document.querySelector(".todos");
 const inputForm = document.querySelector(".input-form");
 const importanceFilter = document.querySelector(".importance");
 const timeFilter = document.querySelector(".time");
-const complishonFilter = document.querySelector(".complishon");
+const completionFilter = document.querySelector(".completion");
 const searchFilter = document.querySelector(".searchBtn");
 const searchInput = document.querySelector(".search-input");
 const resetFilter = document.querySelector(".resetBtnRight");
@@ -293,7 +293,7 @@ const filterFlag = (e) => {
   });
 
   timeFilter.selectedIndex = 0;
-  complishonFilter.selectedIndex = 0;
+  completionFilter.selectedIndex = 0;
 };
 
 const filterChecked = (e) => {
@@ -368,13 +368,13 @@ const filterTime = (e) => {
       break;
   }
   importanceFilter.selectedIndex = 0;
-  complishonFilter.selectedIndex = 0;
+  completionFilter.selectedIndex = 0;
 };
 
 const filterReset = (e) => {
   importanceFilter.selectedIndex = 0;
   timeFilter.selectedIndex = 0;
-  complishonFilter.selectedIndex = 0;
+  completionFilter.selectedIndex = 0;
 
   const todoList = [...todos.children];
   todoList.forEach((todo) => todo.remove());
@@ -392,7 +392,7 @@ const app = () => {
   todos.addEventListener("change", editTodo);
   importanceFilter.addEventListener("click", filterFlag);
   timeFilter.addEventListener("click", filterTime);
-  complishonFilter.addEventListener("click", filterChecked);
+  completionFilter.addEventListener("click", filterChecked);
   searchFilter.addEventListener("click", filterSearch);
   resetFilter.addEventListener("click", filterReset);
 };
