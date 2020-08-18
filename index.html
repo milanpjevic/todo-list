@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Own Todo</title>
+
+    <!-- Google Fonst -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/46a781f931.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ---------- Navbar ---------- -->
+      <header class="nav-container">
+        <nav class="nav-centered">
+          <!-- ---------- Logo ---------- -->
+          <div class="logo">
+            <div class="logo-text">
+              t<span class="invisible">o</span>d<span class="invisible">o</span>
+            </div>
+            <span class="logo-plus">
+              <i class="fas fa-plus-circle"></i>
+            </span>
+            <span class="logo-circle">
+              <i class="fas fa-circle"></i>
+            </span>
+            <span class="logo-check">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <!-- ---------- Search  ---------- -->
+          <form class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search"
+              autofocus
+            />
+            <button type="submit" class="btn searchBtn">
+              <span>
+                <i class="fas fa-search"></i>
+              </span>
+            </button>
+          </form>
+        </nav>
+      </header>
+
+      <!-- ---------- Todo Input ---------- -->
+      <div class="todo-input-container">
+        <form class="input-form">
+          <input
+            type="text"
+            class="todo-input"
+            placeholder="Add task..."
+            autofocus
+          />
+          <button class="btn flagBtn inputFlagBtn" type="button" outline="none">
+            <i class="far fa-flag"></i>
+          </button>
+          <button class="btn addBtn" type="submit">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- ---------- Heading ---------- -->
+      <div class="heading">
+        <div class="bar"></div>
+        <h1 class="title">todos</h1>
+        <div class="bar"></div>
+      </div>
+
+      <!-- ---------- Filters ---------- -->
+      <div class="filters-container">
+        <button class="btn resetBtn invisible">
+          <span>
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+
+        <div class="filter importanceFilter">
+          <label for="importance">importance:</label>
+          <select name="importance" class="importance">
+            <option value="all">all</option>
+            <option value="high">high</option>
+            <option value="low">low</option>
+          </select>
+        </div>
+
+        <div class="filter timeFilter">
+          <label for="time">time:</label>
+          <select name="time" class="time">
+            <option value="older">older first</option>
+            <option value="newer">newest first</option>
+            <option value="edited">last edited</option>
+          </select>
+        </div>
+
+        <div class="filter complishonFilter">
+          <label for="complishon">complishon:</label>
+          <select name="complishon" class="complishon">
+            <option value="all">all</option>
+            <option value="completed">completed</option>
+            <option value="uncompleted">uncompleted</option>
+          </select>
+        </div>
+
+        <button class="btn resetBtn resetBtnRight">
+          <span>
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </div>
+
+      <!-- ---------- Todos ---------- -->
+      <div class="todos-container">
+        <ul class="todos"></ul>
+      </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
