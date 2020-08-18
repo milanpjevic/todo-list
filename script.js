@@ -253,7 +253,7 @@ const filterSearch = (e) => {
     const flag = item.flag;
     const id = item.id;
     const done = item.done;
-    if (text.includes(searchInput.value)) {
+    if (text.toLowerCase().includes(searchInput.value.toLowerCase())) {
       createTodo(text, flag, id, done);
     }
   });
